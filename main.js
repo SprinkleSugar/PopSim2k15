@@ -127,21 +127,6 @@ function main() {
   ];
 
   function handleEvent(event) {
-    if(event.type === gamejs.event.KEY_DOWN){
-      if (event.key === gamejs.event.K_ENTER) {
-        player2.mask |= formChange;
-      } else if(event.key === gamejs.event.K_UP){
-        player2.mask |= up;
-        player2.mask &= ~down;
-      }else if(event.key === gamejs.event.K_DOWN){
-        player2.mask |= down;
-        player2.mask &= ~up;
-      }else if(event.key === gamejs.event.K_LEFT){
-        player2.mask |= left;
-        player2.mask &= ~right;
-      }else if(event.key === gamejs.event.K_RIGHT){
-        player2.mask |= right;
-        player2.mask &= ~left;
       }else if (event.key === gamejs.event.K_SPACE) {
         player1.mask |= formChange;
       } else if(event.key === gamejs.event.K_w){
@@ -229,6 +214,3 @@ function main() {
 };
 gamejs.preload(['fireicewater.png']);
 gamejs.ready(main);
-
-//var audio = new Audio('Kalimba.mp3');
-//audio.play();
